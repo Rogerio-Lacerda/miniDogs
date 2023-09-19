@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+button {
+  border: none;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  max-width: 25rem;
+  margin: 0 auto;
+  padding-top: 3.2rem;
+  display: grid;
+  gap: 2rem;
+}
