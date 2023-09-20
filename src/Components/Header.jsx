@@ -8,7 +8,7 @@ const Header = () => {
     <header className={style.header}>
       <h1>Mini Dogs {}</h1>
       {data?.email ? <span>{data?.email}</span> : null}
-      <button></button>
+      <button className={data?.email ? style.logado : null}></button>
     </header>
   );
 };

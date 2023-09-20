@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './Login.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { login } from '../store/login';
+import { autoLogin, login } from '../store/login';
 import { Navigate, useNavigate } from 'react-router-dom';
 
 const Login = () => {
@@ -15,6 +15,16 @@ const Login = () => {
 
   const navigate = useNavigate();
 
+  React.useEffect(() => {
+    const fetchData = async () => {
+      const payload = await dispatch(autoLogin());
+      if (payload?.payload && payload.payload.email) {
+        navigate('/minidogs');
+      }
+    };
+    fetchData();
+  }, [dispatch, navigate]);
+
   const handleChange = ({ target }) => {
     const { value, id } = target;
     setForms({ ...forms, [id]: value });
@@ -24,7 +34,7 @@ const Login = () => {
     event.preventDefault();
     const usuario = { username: forms.username, password: forms.password };
     const payload = await dispatch(login(usuario));
-    if (payload?.payload) {
+    if (payload?.payload && payload.payload.email) {
       navigate('/minidogs');
     }
   };
