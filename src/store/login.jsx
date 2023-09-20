@@ -28,9 +28,24 @@ const user = createAsyncSlice({
   }),
 });
 
+const fetchToken = token.asyncFetch;
+const fetchUser = user.asyncFetch;
+
 const reducers = combineReducers({
   token: token.reducer,
   user: user.reducer,
 });
+
+export const login = (body) => async (dispatch) => {
+  try {
+    const { payload } = await dispatch(fetchToken(body));
+    if (payload.token !== undefined) {
+      const payloadUser = await dispatch(fetchUser(payload.token));
+      return payloadUser;
+    }
+  } catch {
+    console.log('Erro');
+  }
+};
 
 export default reducers;

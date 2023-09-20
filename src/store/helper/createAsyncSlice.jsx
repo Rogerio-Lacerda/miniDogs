@@ -38,7 +38,7 @@ const createAsyncSlice = (config) => {
 
   const { fetchStarted, fetchSuccess, fetchError } = slice.actions;
 
-  const asyncSlice = (payload) => async (dispatch) => {
+  const asyncFetch = (payload) => async (dispatch) => {
     let response;
     let json;
     try {
@@ -47,17 +47,17 @@ const createAsyncSlice = (config) => {
       response = await fetch(url, options);
       json = await response.json();
       if (response.ok === false) throw new Error(json.message);
-      dispatch(fetchSuccess(json));
+      return dispatch(fetchSuccess(json));
     } catch (err) {
       if (err.message) {
-        dispatch(fetchError(err.message));
+        return dispatch(fetchError(err.message));
       } else {
-        dispatch(fetchError('Erro ao fazer requisição'));
+        return dispatch(fetchError('Erro ao fazer requisição'));
       }
     }
   };
 
-  return { ...slice, asyncSlice };
+  return { ...slice, asyncFetch };
 };
 
 export default createAsyncSlice;
