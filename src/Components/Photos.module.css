@@ -1,0 +1,35 @@
+.photosContainer {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.photo {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-right: 1rem;
+  align-items: center;
+  background: #eee;
+}
+
+.photo div {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.photo img {
+  height: 60px;
+  width: 60px;
+  border-radius: 4px;
+}
+
+.photo p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.photo span {
+  display: block;
+  color: #a7a5a6;
+}

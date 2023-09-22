@@ -18,6 +18,11 @@ a {
   color: inherit;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 .container {
   max-width: 25rem;
   margin: 0 auto;

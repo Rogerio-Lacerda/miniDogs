@@ -2,7 +2,7 @@ import React from 'react';
 import style from './Login.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { autoLogin, login } from '../store/login';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [forms, setForms] = React.useState({
