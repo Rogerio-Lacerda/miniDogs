@@ -1,6 +1,7 @@
 .photosContainer {
   display: grid;
   gap: 0.5rem;
+  padding-bottom: 1rem;
 }
 
 .photo {
@@ -32,4 +33,28 @@
 .photo span {
   display: block;
   color: #a7a5a6;
+}
+
+.btn {
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  justify-self: end;
+  cursor: pointer;
+}
+
+.postagens {
+  /* justify-self: center; */
+  text-align: center;
+  padding: 0.5rem;
+  background: #eee;
+  color: #a7a5a6;
+  font-size: 1.1rem;
 }
