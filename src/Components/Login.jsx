@@ -17,9 +17,12 @@ const Login = () => {
 
   React.useEffect(() => {
     const fetchData = async () => {
-      const payload = await dispatch(autoLogin());
-      if (payload?.payload && payload.payload.email) {
-        navigate('/minidogs');
+      const tokenUser = JSON.parse(window.localStorage.getItem('token'));
+      if (tokenUser) {
+        const payload = await dispatch(autoLogin());
+        if (payload?.payload && payload.payload.email) {
+          navigate('/minidogs');
+        }
       }
     };
     fetchData();

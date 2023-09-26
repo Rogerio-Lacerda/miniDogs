@@ -32,11 +32,16 @@ const createAsyncSlice = (config) => {
         state.loading = false;
         state.error = action.payload;
       },
+      logout(state) {
+        state.data = null;
+        state.loading = false;
+        state.error = null;
+      },
       ...config.reducers,
     },
   });
 
-  const { fetchStarted, fetchSuccess, fetchError } = slice.actions;
+  const { fetchStarted, fetchSuccess, fetchError, logout } = slice.actions;
 
   const asyncFetch = (payload) => async (dispatch) => {
     let response;
@@ -57,7 +62,7 @@ const createAsyncSlice = (config) => {
     }
   };
 
-  return { ...slice, asyncFetch };
+  return { ...slice, asyncFetch, logout };
 };
 
 export default createAsyncSlice;

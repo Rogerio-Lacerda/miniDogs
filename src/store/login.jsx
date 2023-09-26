@@ -67,4 +67,7 @@ export const autoLogin = () => async (dispatch, getState) => {
   }
 };
 
+export const logoutUser = user.logout;
+export const logoutToken = token.logout;
+
 export default reducers;

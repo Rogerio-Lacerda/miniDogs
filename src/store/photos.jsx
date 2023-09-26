@@ -21,4 +21,6 @@ export const showPhotos = (body) => async (dispatch) => {
   }
 };
 
+export const logoutPhotos = photos.logout;
+
 export default photos;
