@@ -38,7 +38,7 @@ const Login = () => {
     const usuario = { username: forms.username, password: forms.password };
     const payload = await dispatch(login(usuario));
     if (payload?.payload && payload.payload.email) {
-      navigate('/minidogs');
+      navigate('/photosdogs');
     }
   };
 
