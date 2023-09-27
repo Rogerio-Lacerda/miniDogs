@@ -43,9 +43,9 @@ const Login = () => {
   };
 
   return (
-    <form className={style.form} onSubmit={handleSubmit}>
+    <form className={`${style.form} anime`} onSubmit={handleSubmit}>
       <div>
-        <label htmlFor="username">Usuario</label>
+        <label htmlFor="username">Usuário</label>
         <input
           type="text"
           id="username"
@@ -74,7 +74,7 @@ const Login = () => {
       {user.error ? (
         <p className={style.error}>{user.error}</p>
       ) : token.error ? (
-        <p className={style.error}>{token.error}</p>
+        <p className={style.error}>Usuário ou Senha incorretos.</p>
       ) : null}
     </form>
   );

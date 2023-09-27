@@ -51,10 +51,30 @@
 }
 
 .postagens {
-  /* justify-self: center; */
   text-align: center;
   padding: 0.5rem;
   background: #eee;
   color: #a7a5a6;
   font-size: 1.1rem;
+}
+
+.loading {
+  justify-self: center;
+  height: 2px;
+  margin-top: 0.5rem;
+  width: 120px;
+  display: block;
+  animation: load 0.3s infinite;
+  background: #000;
+}
+
+@keyframes load {
+  to {
+    width: 0px;
+    /* background: linear-gradient(90deg, #000 30%, #fff); */
+  }
+  from {
+    width: 80px;
+    /* background: linear-gradient(90deg, #fff 30%, #000); */
+  }
 }

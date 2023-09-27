@@ -23,11 +23,12 @@ const Photos = () => {
 
   return (
     <>
+      {loading && !data ? <span className={style.loading}></span> : null}
       {data ? (
         <ul className={style.photosContainer}>
           {data.map(({ id, author, title, date, src, acessos }) => {
             return (
-              <li key={id} className={style.photo}>
+              <li key={id} className={`${style.photo} anime`}>
                 <div>
                   <img src={src} alt={title} />
                   <p>{title}</p>
@@ -36,7 +37,7 @@ const Photos = () => {
               </li>
             );
           })}
-          {loading ? <p>Carregando...</p> : null}
+          {loading ? <span className={style.loading}></span> : null}
           {data ? (
             somar > data.length && loading === false ? (
               <p className={style.postagens}>Não exsitem mais postagens</p>
