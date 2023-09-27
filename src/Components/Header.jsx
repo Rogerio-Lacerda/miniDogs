@@ -17,7 +17,7 @@ const Header = () => {
     dispatch(logoutToken());
     dispatch(logoutPhotos());
     window.localStorage.removeItem('token');
-    navigate('/login');
+    navigate('/miniDogs');
   };
   return (
     <header className={style.header}>

@@ -21,7 +21,7 @@ const Login = () => {
       if (tokenUser) {
         const payload = await dispatch(autoLogin());
         if (payload?.payload && payload.payload.email) {
-          navigate('/minidogs');
+          navigate('/photosdogs');
         }
       }
     };

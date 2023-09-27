@@ -12,8 +12,8 @@ function App() {
         <section className="container">
           <Header />
           <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/minidogs" element={<Photos />} />
+            <Route path="/miniDogs" element={<Login />} />
+            <Route path="/photosdogs" element={<Photos />} />
           </Routes>
         </section>
       </BrowserRouter>
