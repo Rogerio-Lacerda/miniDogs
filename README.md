@@ -1,8 +1,9 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h1>Projeto - miniDogs</h1>
+<p>Este é um projeto pequeno que mostra postagens sobre cachorros</p>
+<p>Criei uma aplicação, onde o usuário pode logar e ver postagens sobre 
+cachorros.
+</p>
+<p>Esta aplicação foi feita com React e Redux.
+</p>
+<p>Usuário padrão para testar a aplicação, usuario: dog, senha: dog.
+</p>
