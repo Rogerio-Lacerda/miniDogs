@@ -7,3 +7,5 @@ cachorros.
 </p>
 <p>Usuário padrão para testar a aplicação, usuario: dog, senha: dog.
 </p>
+<h1>Link do Projeto</h1>
+<a href='https://rogerio-lacerda.github.io/miniDogs/'>https://rogerio-lacerda.github.io/miniDogs/</a>
